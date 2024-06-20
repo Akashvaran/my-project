@@ -1,0 +1,506 @@
+[
+    {
+        "Name": "Fjallraven Backpack",
+        "Price": 109.95,
+        "Description": "Perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve.",
+        "Category": "men's clothing",
+        "Image": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+        "Rate": 0,
+        "Like": 0
+       
+    },
+    {
+        "Name": "Mens Casual T-Shirt",
+        "Price": 22.3,
+        "Description": "Slim-fitting style, contrast raglan long sleeve, three-button henley placket, lightweight & soft fabric for breathable and comfortable wearing.",
+        "Category": "men's clothing",
+        "Image": "https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg",
+        "Rate": 0,
+        "Like": 0
+       
+    },
+    {
+        "Name": "Mens Cotton Jacket",
+        "Price": 55.99,
+        "Description": "Great outerwear jackets for Spring/Autumn/Winter, suitable for many occasions.",
+        "Category": "men's clothing",
+        "Image": "https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg",
+        "Rate": 0,
+        "Like": 0
+       
+    },
+    {
+        "Name": "Mens Casual Slim Fit",
+        "Price": 15.99,
+        "Description": "The color could be slightly different between on the screen and in practice.",
+        "Category": "men's clothing",
+        "Image": "https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_.jpg",
+        "Rate": 0,
+        "Like": 0
+       
+    },
+    {
+        "Name": "Naga Gold Bracelet",
+        "Price": 695,
+        "Description": "Inspired by the mythical water dragon that protects the ocean's pearl.",
+        "Category": "jewelry",
+        "Image": "https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_.jpg",
+        "Rate": 0,
+        "Like": 0
+       
+    },
+    {
+        "Name": "Gold Petite Micropave",
+        "Price": 168,
+        "Description": "Satisfaction Guaranteed. Return or exchange any order within 30 days.",
+        "Category": "jewelry",
+        "Image": "https://fakestoreapi.com/img/61sbMiUnoGL._AC_UL640_QL65_ML3_.jpg",
+        "Rate": 0,
+        "Like": 0
+       
+    },
+    {
+        "Name": "Princess Ring",
+        "Price": 9.99,
+        "Description": "Classic Created Wedding Engagement Solitaire Diamond Promise Ring for Her.",
+        "Category": "jewelry",
+        "Image": "https://fakestoreapi.com/img/71YAIFU48IL._AC_UL640_QL65_ML3_.jpg",
+        "Rate": 0,
+        "Like": 0
+       
+    },
+    {
+        "Name": "Rose Gold Plated Earrings",
+        "Price": 10.99,
+        "Description": "Rose Gold Plated Double Flared Tunnel Plug Earrings.",
+        "Category": "jewelry",
+        "Image": "https://fakestoreapi.com/img/51UDEzMJVpL._AC_UL640_QL65_ML3_.jpg",
+        "Rate": 0,
+        "Like": 0
+       
+    },
+    {
+        "Name": "WD 2TB External Hard Drive",
+        "Price": 64,
+        "Description": "USB 3.0 and USB 2.0 Compatibility Fast data transfers Improve PC Performance High Capacity.",
+        "Category": "electronics",
+        "Image": "https://fakestoreapi.com/img/61IBBVJvSDL._AC_SY879_.jpg",
+        "Rate": 0,
+        "Like": 0
+       
+    },
+    {
+        "Name": "SanDisk SSD 1TB",
+        "Price": 109,
+        "Description": "Easy upgrade for faster boot up, shutdown, application load and response.",
+        "Category": "electronics",
+        "Image": "https://fakestoreapi.com/img/61U7T1koQqL._AC_SX679_.jpg",
+        "Rate": 0,
+        "Like": 0
+       
+    },
+    {
+        "Name": "Silicon Power 256GB SSD",
+        "Price": 109,
+        "Description": "3D NAND flash are applied to deliver high transfer speeds.",
+        "Category": "electronics",
+        "Image": "https://fakestoreapi.com/img/71kWymZ+c+L._AC_SX679_.jpg",
+        "Rate": 0,
+        "Like": 0
+       
+    },
+    {
+        "Name": "WD 4TB Gaming Drive",
+        "Price": 114,
+        "Description": "Expand your PS4 gaming experience, Play anywhere Fast and easy, setup.",
+        "Category": "electronics",
+        "Image": "https://fakestoreapi.com/img/61mtL65D4cL._AC_SX679_.jpg",
+        "Rate": 0,
+        "Like": 0
+       
+    },
+    {
+        "Name": "Acer 21.5\" Monitor",
+        "Price": 599,
+        "Description": "21. 5 inches Full HD (1920 x 1080) widescreen IPS display.",
+        "Category": "electronics",
+        "Image": "https://fakestoreapi.com/img/81QpkIctqPL._AC_SX679_.jpg",
+        "Rate": 0,
+        "Like": 0
+       
+    },
+    {
+        "Name": "Samsung 49\" Curved Monitor",
+        "Price": 999.99,
+        "Description": "49 INCH SUPER ULTRAWIDE 32:9 CURVED GAMING MONITOR with dual 27 inch screen side by side.",
+        "Category": "electronics",
+        "Image": "https://fakestoreapi.com/img/81Zt42ioCgL._AC_SX679_.jpg",
+        "Rate": 0,
+        "Like": 0
+       
+    },
+    {
+        "Name": "BIYLACLESEN Jacket",
+        "Price": 56.99,
+        "Description": "Detachable Liner Fabric: Warm Fleece. Detachable Functional Liner: Skin Friendly, Lightweight and Warm.",
+        "Category": "women's clothing",
+        "Image": "https://fakestoreapi.com/img/51Y5NI-I5jL._AC_UX679_.jpg",
+        "Rate": 0,
+        "Like": 0
+       
+    },
+    {
+        "Name": "Lock and Love Jacket",
+        "Price": 29.95,
+        "Description": "100% POLYURETHANE(shell) 100% POLYESTER(lining) 75% POLYESTER 25% COTTON (SWEATER), Faux leather material for style and comfort.",
+        "Category": "women's clothing",
+        "Image": "https://fakestoreapi.com/img/81XH0e8fefL._AC_UY879_.jpg",
+        "Rate": 0,
+        "Like": 0
+       
+    },
+    {
+        "Name": "MBJ Women's T-Shirt",
+        "Price": 9.85,
+        "Description": "95% RAYON 5% SPANDEX, Made in USA or Imported, Do Not Bleach, Lightweight fabric with great stretch for comfort.",
+        "Category": "women's clothing",
+        "Image": "https://fakestoreapi.com/img/71z3kpMAYsL._AC_UY879_.jpg",
+        "Rate": 0,
+        "Like": 0
+       
+    },
+    {
+        "Name": "Opna Women's T-Shirt",
+        "Price": 7.95,
+        "Description": "100% Polyester, Machine wash, 100% cationic polyester interlock, Machine Wash & Pre Shrunk for a Great Fit.",
+        "Category": "women's clothing",
+        "Image": "https://fakestoreapi.com/img/51eg55uWmdL._AC_UX679_.jpg",
+        "Rate": 0,
+        "Like": 0
+       
+    },
+    {
+        "Name": "DANVOUY T-Shirt",
+        "Price": 12.99,
+        "Description": "95%Cotton,5%Spandex, Features: Casual, Short Sleeve, Letter Print,V-Neck,Fashion Tees, The fabric is soft and has some stretch.",
+        "Category": "women's clothing",
+        "Image": "https://fakestoreapi.com/img/61pHAEJ4NML._AC_UX679_.jpg",
+        "Rate": 0,
+        "Like": 0
+       
+    }
+    
+    ,
+    {
+        "Name": "Air Pods",
+        "Price": 12.99,
+        "Description": "95%Cotton,5%Spandex, Features: Casual, Short Sleeve, Letter Print,V-Neck,Fashion Tees, The fabric is soft and has some stretch.",
+        "Category": "Air bots",
+        "Image": "https://cdn1.smartprix.com/rx-iP8UNBXrc-w1200-h1200/P8UNBXrc.jpg",
+        "Rate": 0,
+        "Like": 0
+       
+    },
+    {
+        "Name": " AirPods Max",
+        "Price": 12.99,
+        "Description": "95%Cotton,5%Spandex, Features: Casual, Short Sleeve, Letter Print,V-Neck,Fashion Tees, The fabric is soft and has some stretch.",
+        "Category": "women's clothing",
+        "Image": "https://images-cdn.ubuy.co.in/633aec3932fb2b697f1d028e-gaming-headset-ps5-ps4-headset-with-7-1.jpg",
+        "Rate": 0,
+        "Like": 0
+       
+    },
+    {
+        "Name": "laptop",
+        "Price": 12.99,
+        "Description": "95%Cotton,5%Spandex, Features: Casual, Short Sleeve, Letter Print,V-Neck,Fashion Tees, The fabric is soft and has some stretch.",
+        "Category": "women's clothing",
+        "Image": "https://images.pexels.com/photos/572056/pexels-photo-572056.jpeg",
+        "Rate": 0,
+        "Like": 0
+       
+    },
+    {
+        "Name": "Tab",
+        "Price": 12.99,
+        "Description": "95%Cotton,5%Spandex, Features: Casual, Short Sleeve, Letter Print,V-Neck,Fashion Tees, The fabric is soft and has some stretch.",
+        "Category": "women's clothing",
+        "Image": "https://5.imimg.com/data5/SELLER/Default/2023/6/320108408/ME/NB/ZX/8447505/lenovo-tab-m10-hd-tablet-10-1-inch.jpg",
+        "Rate": 0,
+        "Like": 0
+       
+    },
+    {
+        "Name": "Shoue",
+        "Price": 12.99,
+        "Description": "95%Cotton,5%Spandex, Features: Casual, Short Sleeve, Letter Print,V-Neck,Fashion Tees, The fabric is soft and has some stretch.",
+        "Category": "good wokking",
+        "Image": "https://www.jiomart.com/images/product/original/rvl9cvytva/bruton-trendy-sports-shoes-for-men-blue-product-images-rvl9cvytva-0-202209021254.jpg?im=Resize=(500,630)",
+        "Rate": 0,
+        "Like": 0
+       
+    },
+    {
+        "Name": "Bat-Balls",
+        "Price": 12.99,
+        "Description": "95%Cotton,5%Spandex, Features: Casual, Short Sleeve, Letter Print,V-Neck,Fashion Tees, The fabric is soft and has some stretch.",
+        "Category": "Cricket-bat balls",
+        "Image": "https://static.toiimg.com/thumb/msid-85127432,width-400,resizemode-4/85127432.jpg",
+        "Rate": 0,
+        "Like": 0
+       
+    },
+    {
+        "Name": "Sun-Class",
+        "Price": 12.99,
+        "Description": "95%Cotton,5%Spandex, Features: Casual, Short Sleeve, Letter Print,V-Neck,Fashion Tees, The fabric is soft and has some stretch.",
+        "Category": "super Cooler",
+        "Image": "https://images.unsplash.com/photo-1577803645773-f96470509666?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c3VuJTIwZ2xhc3Nlc3xlbnwwfHwwfHx8MA%3D%3D",
+        "Rate": 0,
+        "Like": 0
+       
+    },
+     {
+        "Name": "AC",
+        "Price": 12.99,
+        "Description": "95%Cotton,5%Spandex, Features: Casual, Short Sleeve, Letter Print,V-Neck,Fashion Tees, The fabric is soft and has some stretch.",
+        "Category": "Cooling winder",
+        "Image": "https://5.imimg.com/data5/ANDROID/Default/2022/2/HD/UG/YG/23286808/product-jpeg.jpg",
+        "Rate": 0,
+        "Like": 0
+       
+    }
+    ,
+     {
+        "Name": "CleaningProduct",
+        "Price": 12.99,
+        "Description": "95%Cotton,5%Spandex, Features: Casual, Short Sleeve, Letter Print,V-Neck,Fashion Tees, The fabric is soft and has some stretch.",
+        "Category": "cleaning",
+        "Image": "https://images.ctfassets.net/0gqf8nju6pz6/72jWC9NdYjGUxfEKukhrmu/cbf79313bc6ecb9070610292f488bbb5/Vacuum.jpeg",
+        "Rate": 0,
+        "Like": 0
+       
+    },
+    {
+        "Name": "stationery",
+        "Price": 12.99,
+        "Description": "95%Cotton,5%Spandex, Features: Casual, Short Sleeve, Letter Print,V-Neck,Fashion Tees, The fabric is soft and has some stretch.",
+        "Category": "cleaning",
+        "Image": "https://m.media-amazon.com/images/I/81IuTVj927L.jpg",
+        "Rate": 0,
+        "Like": 0
+       
+    },
+    {
+        "Name": "department Store product",
+        "Price": 12.99,
+        "Description": "95%Cotton,5%Spandex, Features: Casual, Short Sleeve, Letter Print,V-Neck,Fashion Tees, The fabric is soft and has some stretch.",
+        "Category": "cleaning",
+        "Image": "https://www.betterbutter.in/blog/wp-content/uploads/2021/09/grocery-shopping-feature.jpg",
+        "Rate": 0,
+        "Like": 0
+       
+    },
+    {
+        "Name": "Food Ball",
+        "Price": 12.99,
+        "Description": "95%Cotton,5%Spandex, Features: Casual, Short Sleeve, Letter Print,V-Neck,Fashion Tees, The fabric is soft and has some stretch.",
+        "Category": "Sports",
+        "Image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnf9X4vHVCJXmocz1xIe7WRwfEszxJZnp2uw&s",
+        "Rate": 0,
+        "Like": 0
+       
+    },
+    {
+        "Name": "Sliper",
+        "Price": 12.99,
+        "Description": "95%Cotton,5%Spandex, Features: Casual, Short Sleeve, Letter Print,V-Neck,Fashion Tees, The fabric is soft and has some stretch.",
+        "Category": "Waking",
+        "Image": "https://www.jiomart.com/images/product/original/rvy9llvmhw/squash-extra-comfort-navy-casual-stylish-slippers-flipflops-product-images-rvy9llvmhw-0-202210031739.jpg?im=Resize=(1000,1000)",
+        "Rate": 0,
+        "Like": 0
+       
+    },
+    {
+        "Name": "plasitic",
+        "Price": 12.99,
+        "Description": "95%Cotton,5%Spandex, Features: Casual, Short Sleeve, Letter Print,V-Neck,Fashion Tees, The fabric is soft and has some stretch.",
+        "Category": "Kichan",
+        "Image": "https://5.imimg.com/data5/SELLER/Default/2020/12/LQ/LA/II/5864137/plastic-products-500x500.jpeg",
+        "Rate": 0,
+        "Like": 0
+       
+    },
+    {
+        "Name": "Biskat",
+        "Price": 12.99,
+        "Description": "95%Cotton,5%Spandex, Features: Casual, Short Sleeve, Letter Print,V-Neck,Fashion Tees, The fabric is soft and has some stretch.",
+        "Category": "Eating",
+        "Image": "https://images.immediate.co.uk/production/volatile/sites/30/2013/05/Viennese-whirls-biscuit-collection-78b950a.jpg?resize=768,574",
+        "Rate": 0,
+        "Like": 0
+       
+    },
+    {
+        "Name": "Dairy Milk",
+        "Price": 12.99,
+        "Description": "95%Cotton,5%Spandex, Features: Casual, Short Sleeve, Letter Print,V-Neck,Fashion Tees, The fabric is soft and has some stretch.",
+        "Category": "Eating",
+        "Image": "https://osiamart.com/images/thumbs/0013193_cadbury-dairy-milk-silk-mousse-chocolate-116gm.jpeg",
+        "Rate": 0,
+        "Like": 0
+       
+    },
+    {
+        "Name": "Ice cream",
+        "Price": 12.99,
+        "Description": "95%Cotton,5%Spandex, Features: Casual, Short Sleeve, Letter Print,V-Neck,Fashion Tees, The fabric is soft and has some stretch.",
+        "Category": "Eating",
+        "Image": "https://naturalicecreams.in/wp-content/uploads/2024/01/Raspberry-tubshot.jpg",
+        "Rate": 0,
+        "Like": 0
+       
+    }
+    ,
+    {
+        "Name": "furniture",
+        "Price": 12.99,
+        "Description": "95%Cotton,5%Spandex, Features: Casual, Short Sleeve, Letter Print,V-Neck,Fashion Tees, The fabric is soft and has some stretch.",
+        "Category": "furniture",
+        "Image": "https://m.media-amazon.com/images/I/516lXEB6T0L.jpg",
+        "Rate": 0,
+        "Like": 0
+       
+    },
+    {
+        "Name": "Frige",
+        "Price": 12.99,
+        "Description": "95%Cotton,5%Spandex, Features: Casual, Short Sleeve, Letter Print,V-Neck,Fashion Tees, The fabric is soft and has some stretch.",
+        "Category": "Electronics",
+        "Image": "https://static2.bigstockphoto.com/2/3/1/large1500/132515891.jpg",
+        "Rate": 0,
+        "Like": 0
+       
+    },
+    {
+        "Name": "wasing machine",
+        "Price": 12.99,
+        "Description": "95%Cotton,5%Spandex, Features: Casual, Short Sleeve, Letter Print,V-Neck,Fashion Tees, The fabric is soft and has some stretch.",
+        "Category": "Electronics",
+        "Image": "https://www.livemint.com/lm-img/img/2023/10/13/600x338/planetcare-5cpBWEl6y6c-unsplash_1697190115364_1697190123702.jpg",
+        "Rate": 0,
+        "Like": 0
+       
+    },
+    {
+        "Name": "wasing machine",
+        "Price": 12.99,
+        "Description": "95%Cotton,5%Spandex, Features: Casual, Short Sleeve, Letter Print,V-Neck,Fashion Tees, The fabric is soft and has some stretch.",
+        "Category": "Cokker",
+        "Image": "https://5.imimg.com/data5/FE/EZ/GD/ANDROID-104870261/product-jpeg.jpg",
+        "Rate": 0,
+        "Like": 0
+       
+    },
+    {
+        "Name": "Dinning table",
+        "Price": 12.99,
+        "Description": "95%Cotton,5%Spandex, Features: Casual, Short Sleeve, Letter Print,V-Neck,Fashion Tees, The fabric is soft and has some stretch.",
+        "Category": "Table",
+        "Image": "https://5.imimg.com/data5/SELLER/Default/2022/2/CH/BM/CC/70295962/picsart-22-02-22-15-30-09-397-1-.jpg",
+        "Rate": 0,
+        "Like": 0
+       
+    },
+    {
+        "Name": "showpa",
+        "Price": 12.99,
+        "Description": "95%Cotton,5%Spandex, Features: Casual, Short Sleeve, Letter Print,V-Neck,Fashion Tees, The fabric is soft and has some stretch.",
+        "Category": "showpa",
+        "Image": "https://4.imimg.com/data4/BP/HC/MY-24424532/living-500x500.jpg",
+        "Rate": 0,
+        "Like": 0
+       
+    },
+    {
+        "Name": "Wash Basin",
+        "Price": 12.99,
+        "Description": "95%Cotton,5%Spandex, Features: Casual, Short Sleeve, Letter Print,V-Neck,Fashion Tees, The fabric is soft and has some stretch.",
+        "Category": "Cleaning",
+        "Image": "https://image.made-in-china.com/2f0j00WiCqOoFRAfcr/New-Design-Sanitary-Ware-Ceramic-Cabinet-Basin-with-Mirror-Wash-Basin.webp",
+        "Rate": 0,
+        "Like": 0
+       
+    },
+    {
+        "Name": "Hand Fan",
+        "Price": 12.99,
+        "Description": "95%Cotton,5%Spandex, Features: Casual, Short Sleeve, Letter Print,V-Neck,Fashion Tees, The fabric is soft and has some stretch.",
+        "Category": "Fan",
+        "Image": "https://shop360.in/wp-content/uploads/2023/05/5176zQEBDxL._SL1339_1.jpg",
+        "Rate": 0,
+        "Like": 0
+       
+    },
+    {
+        "Name": "mixer",
+        "Price": 12.99,
+        "Description": "95%Cotton,5%Spandex, Features: Casual, Short Sleeve, Letter Print,V-Neck,Fashion Tees, The fabric is soft and has some stretch.",
+        "Category": "HouseMade",
+        "Image": "https://www.shutterstock.com/image-photo/juicer-mixer-grinder-isolated-on-260nw-2209938647.jpg",
+        "Rate": 0,
+        "Like": 0
+       
+    },
+    {
+        "Name": "Grinder",
+        "Price": 12.99,
+        "Description": "95%Cotton,5%Spandex, Features: Casual, Short Sleeve, Letter Print,V-Neck,Fashion Tees, The fabric is soft and has some stretch.",
+        "Category": "HomeMade",
+        "Image": "https://5.imimg.com/data5/SELLER/Default/2022/11/KU/EB/PY/89419838/2-liter-domestic-wet-grinder.jpg",
+        "Rate": 0,
+        "Like": 0
+       
+    },
+    {
+        "Name": "camera",
+        "Price": 12.99,
+        "Description": "95%Cotton,5%Spandex, Features: Casual, Short Sleeve, Letter Print,V-Neck,Fashion Tees, The fabric is soft and has some stretch.",
+        "Category": "ImageSaver",
+        "Image": "https://www.premiumbeat.com/blog/wp-content/uploads/2020/07/Camera-Tech-Cover-photo.jpg",
+        "Rate": 0,
+        "Like": 0
+       
+    },
+    {
+        "Name": "Mobile",
+        "Price": 12.99,
+        "Description": "95%Cotton,5%Spandex, Features: Casual, Short Sleeve, Letter Print,V-Neck,Fashion Tees, The fabric is soft and has some stretch.",
+        "Category": "Phone",
+        "Image": "https://images-cdn.ubuy.co.in/633b5984f8af8c7e5a371e0b-na-i13-pro-max-cell-phones-6-3-inch-hd.jpg",
+        "Rate": 0,
+        "Like": 0
+       
+    },
+    {
+        "Name": "Laptop",
+        "Price": 12.99,
+        "Description": "95%Cotton,5%Spandex, Features: Casual, Short Sleeve, Letter Print,V-Neck,Fashion Tees, The fabric is soft and has some stretch.",
+        "Category": "Laptop",
+        "Image": "https://images.pexels.com/photos/7974/pexels-photo.jpg?cs=srgb&dl=pexels-life-of-pix-7974.jpg&fm=jpg",
+        "Rate": 0,
+        "Like": 0
+       
+    },
+    {
+        "Name": "Home Desing Product",
+        "Price": 12.99,
+        "Description": "95%Cotton,5%Spandex, Features: Casual, Short Sleeve, Letter Print,V-Neck,Fashion Tees, The fabric is soft and has some stretch.",
+        "Category": "desing Product",
+        "Image": "https://www.apkainterior.com/blog/wp-content/uploads/2021/04/1542755927428.jpg",
+        "Rate": 0,
+        "Like": 0
+       
+    }
+]

@@ -1,0 +1,178 @@
+.Navigation-bar {
+  position: sticky; 
+  top: 0; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  color: #fff;
+  height: 90px;
+  width: 100%;
+  z-index: 99;
+}
+.logo {
+  width: 110px;
+}
+.Navbar-content ul {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+}
+.Navbar-content ul li {
+  margin-right: 20px;
+}
+.Navbar-content ul li a {
+  color: #fff;
+  text-decoration: none;
+  margin-right: 15px;
+}
+.Navbar-Right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.search-box,
+.addtocart {
+  margin-right: 20px;
+  font-size: 24px;
+}
+.user-signup .sign-up {
+  background-color: #fff;
+  color: #333;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.dropdown {
+  position: relative;
+  margin-right: 20px;
+  margin-top: 10px;
+}
+.dropbtn {
+  background-color: transparent;
+  color: #fff;
+  cursor: pointer;
+  align-items: center;
+  border: none;
+}
+.dropdown-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 90px;
+  right: 30px;
+  background-color: #333;
+  width: 180px;
+  height: 120px;
+  border-radius: 15px;
+  padding: 0 9px;
+}
+.dropdown-content::after{
+  content: '';
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 0;
+  right: -10px;
+  border-radius: 20px 5px 255px 20px;
+  background-color: #333;
+  z-index: -1;
+}
+.dropdown-content a { 
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 15px;
+  width: 100%;
+  text-align: center;
+  
+}
+.dropdown-content a:hover{
+  background-color: rgba(92, 85, 85, 0.784);
+}
+
+.search-box {
+  font-size: 24px;
+  margin-right: 20px;
+  position: relative;
+}
+.searchs-box {
+  top: 95px;
+  right: 300px;
+  position: absolute;
+  height: 100px;
+  width: 550px;
+  background-color: rgb(11, 12, 10);
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+.searchs-box .closeMenuIcon {
+  position: absolute;
+  right: 8px;
+  font-size: 28px;
+} 
+.searchs-box input[type="text"] {
+  width: 450px;
+  height: 45px;
+  border: none;
+  outline: none;
+  background: rgb(226, 220, 220);
+  border-radius: 30px;
+  border: 1px solid black;
+  color: gray;
+  font-size: 16px;
+  text-align: center;
+  padding-right: 40px;
+  align-items: center;
+  justify-content: center;
+}
+
+.searchbar-form {
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  top: 30px;
+  left: 25px;
+}
+
+
+.searchs-box .searchbutton {
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border-radius: 30px;
+  border: none;
+  background: black;
+  color: aliceblue;
+  font-size: 18px;
+  position: absolute;
+  top: 3px;
+  right: 3px;
+}
+.userimageprofile {
+  font-size: 30px;
+}
+.addtocollection .addtocart {
+  position: relative;
+}
+
+.addtocollection .collectioncount .addtocount {
+  position: absolute;
+  padding: 2px 8px; 
+  background-color: red;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  border-radius: 50%; 
+  top: -15px; 
+  right: -15px; 
+  min-width: auto; 
+  min-height: auto; 
+}
+

@@ -1,0 +1,10 @@
+
+@import url('https://unpkg.com/leaflet@1.7.1/dist/leaflet.css');
+
+
+.leaflet-container {
+  height: 350px;
+  width: 300px;
+  border: 2px solid blue;
+  box-shadow: 5px 5px 15px rgba(0.5, 0.8, 0.7, 0.9)
+}

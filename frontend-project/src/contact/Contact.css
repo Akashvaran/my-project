@@ -1,0 +1,132 @@
+.contact {
+    margin-top: 40px;
+    background-color: #111;
+    color: #fff;
+    padding: 30px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+  
+  .contact-container {
+    padding: 50px 0;
+  }
+  
+  .contactform {
+    max-width: 500px;
+    margin: auto;
+  }
+  
+  .contactform .form-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  .contactform .form-control {
+    background: none;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    border-radius: 0;
+    color: #fff;
+    padding: 10px 0;
+  }
+  
+  .contactform .form-control:focus {
+    border-color: #fff;
+    box-shadow: none;
+  }
+  
+  .contactform label {
+    color: #ccc;
+    font-weight: 300;
+    font-size: 0.9rem;
+  }
+  
+  .submit-btn {
+    background-color: #fff;
+    color: #111;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1rem;
+    transition: all 0.3s;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    z-index: 1;
+  }
+  
+  .submit-btn:before,
+  .submit-btn:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 50%;
+    background: linear-gradient(to right, #f00, #ff0);
+    z-index: -1;
+    transition: all 0.3s;
+  }
+  
+  .submit-btn:before {
+    left: -100%;
+  }
+  
+  .submit-btn:after {
+    right: -100%;
+  }
+  
+  .submit-btn:hover:before,
+  .submit-btn:hover:after {
+    left: 0;
+    right: 0;
+  }
+  
+  .contact-info {
+    text-align: center;
+  }
+  
+  .contact-info h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #fff;
+    position: relative;
+    display: inline-block;
+  }
+  
+  .contact-info h2 span {
+    display: block;
+    color: #f00;
+  }
+  
+  .contact-info p {
+    color: #ccc;
+    margin-top: 20px;
+    font-size: 1rem;
+    font-weight: 300;
+  }
+  
+  /* Styles for social icons */
+  .contact-icons {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .contact-icons li {
+    margin: 0 10px;
+    font-size: 2rem;
+    color: #ccc;
+    transition: color 0.3s;
+  }
+  
+  .contact-icons li:hover {
+    color: red;
+  }
+  
+  @media (max-width: 767px) {
+    .contact-info {
+      margin-top: 30px;
+    }
+  }
+  

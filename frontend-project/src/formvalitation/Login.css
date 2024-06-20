@@ -1,0 +1,122 @@
+.login-page {
+  display: flex;
+  position: absolute;
+  z-index: 98;
+  justify-content: center;
+  align-items: center;
+  top: 30px;
+  margin-left: 35px;
+  background-color: rgba(59, 51, 46, 0.677);
+  height: 100vh;
+  width: calc(100vw - 180px);
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.login-Container {
+  width: 400px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: darkgray;
+}
+
+.login-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.StateName {
+  flex-grow: 1;
+  text-align: center;
+}
+
+.login-message h2 {
+  margin: 0;
+  font-size: 24px;
+}
+
+
+.login-msginputs {
+  position: relative;
+}
+
+.login-msginputs input {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.password-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.password-container input {
+  flex-grow: 1;
+}
+
+.password-toggle {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.login-Container button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  background-color: #007bff;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.login-condition {
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+}
+
+.login-condition input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.login-condition p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.accounntverfiaction {
+  margin-top: 10px;
+}
+
+.accounntverfiaction span {
+  color: blue;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.error {
+  margin-top: -10px;
+  margin-bottom: 0;
+  color: red;
+}
+
+.forgot-password {
+  display: block; 
+  text-align: right;
+}
