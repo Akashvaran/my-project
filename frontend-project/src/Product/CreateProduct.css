@@ -42,7 +42,7 @@
     color: white;
 }
 
-.form-group input,
+.form-group .create-input,
 .form-group textarea {
     padding: 12px;
     border: 1px solid aqua;
@@ -91,5 +91,5 @@ button[type="submit"] {
     outline: none;
     transition: border-color 0.3s;
     width: 100%;
-}
+} 
 

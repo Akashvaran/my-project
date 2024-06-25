@@ -123,7 +123,7 @@ const Profile = () => {
       <div className="user-profile-form">
         <div className="profile-pic-section">
           <img src={`http://localhost:8000/${userInfo.ProfilePic}`} alt="Profile" className="profile-pic" />
-          <form className="update-profile-form">
+          <form className="update-profile-forms">
             <input
               type="file"
               accept="image/*"

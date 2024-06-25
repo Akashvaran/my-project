@@ -21,7 +21,7 @@ const Footer = () => {
               <button className="submit-botton position-absolute rounded-pill" type="button">Subscribe Now!</button>
             </div>
             <div className="row ">
-              <div className="col-md-4">
+              <div className="Heading-details col-md-4">
                 <h5>Partnership</h5>
                 <ul className="list-unstyled">
                   <li><a href="#">Websites</a></li>
@@ -29,14 +29,14 @@ const Footer = () => {
                   <li><a href="#">Branding</a></li>
                 </ul>
               </div>
-              <div className="col-md-4">
+              <div className="Heading-details col-md-4">
                 <h5>About</h5>
                 <ul className="list-unstyled">
                   <li><a href="#">Our Projects</a></li>
                   <li><a href="#">Careers</a></li>
                 </ul>
               </div>
-              <div className="col-md-4">
+              <div className="Heading-details col-md-4">
                 <h5>Support</h5>
                 <ul className="list-unstyled">
                   <li><a href="#">Support Request</a></li>

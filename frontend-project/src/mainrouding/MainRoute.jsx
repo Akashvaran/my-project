@@ -14,6 +14,7 @@ import CreateProduct from '../Product/CreateProduct';
 import { ProductDetail } from '../Product/singleproduct/ProductDetail';
 import { Messages } from '../Message/GetMessage';
 import { ResetPassword } from '../formvalitation/ResetPassword';
+import { Addtocart } from '../addtocart/Addtocart';
 
 export const MainRoute = () => {
   const [showLogin, setShowLogin] = useState(false);
@@ -39,6 +40,7 @@ export const MainRoute = () => {
               <Route path="/product/:id" element={<ProductDetail />} />
               <Route path='/Message' element={<Messages/>}/>
               <Route path="/reset/:token" element={<ResetPassword />} />
+              <Route path='/addtocart' element={<Addtocart/>}/>
             </Routes>
           </div>
         </div>

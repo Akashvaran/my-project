@@ -1,0 +1,190 @@
+.conteiainer {
+  text-align: center;
+
+}
+.therd-component {
+  margin-top: 70px;
+}
+
+h1 {
+  margin-bottom: 50px;
+}
+
+.lines hr {
+  width: 250px;
+  border: 3px solid;
+  margin: 0 auto 50px;
+}
+
+.section {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.cards {
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px;
+  width: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.cards:hover {
+  box-shadow: 5px 5px 5px 5px aqua;
+  transition: 0.3s;
+  transform: scale(1.1);
+}
+
+.cards img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.Paragraph {
+  font-size: 14px;
+}
+
+
+.about-container {
+  display: flex;
+  gap: 40px;
+  padding: 50px;
+  background-color: #f9f9f9;
+  color: #333;
+  box-shadow: inset;
+  margin-bottom: 50px;
+  background: url(https://startupsmagazine.co.uk/sites/default/files/2024-03/ecommerce.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.image-container {
+  flex: 1;
+  margin-right: 50px;
+}
+
+.image-containers img {
+  width: 500px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.content-container {
+  flex: 2;
+  text-align: justify;
+}
+
+.content-container h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+  color: chartreuse;
+}
+
+.content-container p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.content-container p:last-child {
+  margin-bottom: 0;
+}
+
+.drupal-services {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background: #f5f5f5;
+}
+
+.content {
+  flex: 1;
+  padding-right: 20px;
+}
+
+.content h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.content p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+.logos {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.logos img {
+  max-height: 50px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.form-container {
+  width: 300px;
+  background: #000;
+  color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  position: relative;
+}
+
+.form-container h2 {
+  margin-bottom: 20px;
+}
+
+.form-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-container input {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+.form-container button {
+  padding: 10px;
+  background: #f90;
+  border: none;
+  border-radius: 5px;
+  color: #000;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.need-help {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #ff0;
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.need-help span {
+  margin-right: 10px;
+}
+
+.need-help img {
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+}

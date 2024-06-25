@@ -10,8 +10,8 @@ import {
 import "leaflet/dist/leaflet.css";
 import './Location.css'; 
 
-const center = [20.5937, 78.9629];
-const specificLocation = [10.021611, 79.159333]; // Converted coordinates to decimal
+
+const specificLocation = [10.021611, 79.159333]; 
 
 export const Location = () => {
   const markerRef = useRef(null);
@@ -23,7 +23,7 @@ export const Location = () => {
   }, []);
 
   return (
-    <MapContainer center={center} zoom={6} scrollWheelZoom={true} className="map-container">
+    <MapContainer center={specificLocation} zoom={8} scrollWheelZoom={true} className="map-container">
       <TileLayer
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

@@ -6,7 +6,7 @@ import { FiShoppingCart } from "react-icons/fi";
 import { FaRegUserCircle } from "react-icons/fa";
 import { IoCloseSharp } from "react-icons/io5";
 import axios from 'axios';
-import './Navbar.css'
+import './Navbar.css';
 
 const Navbar = ({ setShowLogin }) => {
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -14,16 +14,25 @@ const Navbar = ({ setShowLogin }) => {
     const [userDetails, setUserDetails] = useState(null);
     const navigate = useNavigate();
 
-    useEffect(() => {
+    const getUserDetailsFromLocalStorage = () => {
         try {
             const storedUser = localStorage.getItem('username');
             if (storedUser) {
-                setUserDetails(JSON.parse(storedUser));
+                return JSON.parse(storedUser);
             } else {
                 console.log("No stored user found");
+                return null;
             }
         } catch (error) {
             console.error("Error parsing stored user:", error);
+            return null;
+        }
+    };
+
+    useEffect(() => {
+        const user = getUserDetailsFromLocalStorage();
+        if (user) {
+            setUserDetails(user);
         }
     }, []);
 
@@ -50,7 +59,7 @@ const Navbar = ({ setShowLogin }) => {
 
     return (
         <div className="Navigation-bar">
-      <img className='logo' src="logo.png" alt="logo" />
+            <img className='logo' src='logo.png' alt="logo" />
             <div className="Navbar-content">
                 <ul>
                     <li><Link to="/">Home</Link></li>
@@ -75,7 +84,7 @@ const Navbar = ({ setShowLogin }) => {
                 )}
                 <div className='addtocollection'>
                     <div className="addtocart">
-                        <p><FiShoppingCart /></p>
+                    <p> <Link to={'/addtocart'}><FiShoppingCart /></Link> </p>  
                         <div className='collectioncount'>
                             <span className='addtocount'>0</span>
                         </div>
@@ -85,10 +94,10 @@ const Navbar = ({ setShowLogin }) => {
                 <div className='user-signup'>
                     <button className="sign-up" onClick={() => setShowLogin(true)}>Sign up</button>
                 </div>
-                <div className="dropdown">
-                    <button className="dropbtn" onClick={toggleDropdown}>
+                <div className="dropdowns">
+                    <button className="dropbtns" onClick={toggleDropdown}>
                         {userImage ? (
-                            <img
+                            <img className='update-user-image'
                                 style={{
                                     width: '50px',
                                     height: '50px',
@@ -101,6 +110,7 @@ const Navbar = ({ setShowLogin }) => {
                             />
                         ) : (
                             <FaRegUserCircle
+                                className='user-image-icon'
                                 style={{
                                     width: '50px',
                                     height: '50px',
@@ -124,4 +134,4 @@ const Navbar = ({ setShowLogin }) => {
     );
 };
 
-export { Navbar }
+export { Navbar };

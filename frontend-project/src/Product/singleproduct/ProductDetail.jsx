@@ -53,6 +53,11 @@ function ProductDetail() {
         event.preventDefault();
         try {
             const newRate = parseFloat(userRating);
+            if (isNaN(newRate) || newRate < 0 || newRate > 5) {
+                toast.error('Invalid rating value. Please enter a number between 0 and 5.');
+                return;
+            }
+
             const response = await axios.post(`http://localhost:8000/product/products/${id}/rate`, { rating: newRate });
 
             if (response.status === 200 && response.data) {
@@ -72,6 +77,38 @@ function ProductDetail() {
         }
     };
 
+    const handleAddToCart = async () => {
+        try {
+            const token = localStorage.getItem('token');
+          
+            if (!token) {
+                toast.error('You need to log in to add items to the cart.');
+                return;
+            }
+    
+            const response = await axios.post(
+                `http://localhost:8000/api/add`,
+                { productId: id, quantity: 1 },
+                {
+                    headers: {
+                        Authorization: `Bearer ${token}`
+                    },
+                    withCredentials: true
+                }
+            );
+    
+            if (response.status === 200) {
+                toast.success('Product added to cart successfully');
+            } else {
+                console.error('Error adding product to cart:', response.statusText);
+                toast.error('Error adding product to cart');
+            }
+        } catch (error) {
+            console.error('Error adding product to cart:', error);
+            toast.error('Error adding product to cart');
+        }
+    };
+    
     if (!product) {
         return (
             <div className="loading-container">
@@ -119,17 +156,17 @@ function ProductDetail() {
                         <input
                             type="number"
                             id="userRating"
-                            min="1"
+                            min="0"
                             max="5"
+                            step="0.1"
                             value={userRating}
                             onChange={(e) => setUserRating(e.target.value)}
                         />
                         <button type="submit">Submit Rating</button>
                     </form>
-                   
                     <div className='collection'>
-                        <button className='Payment'>buy</button>
-                        <button className='Collection'> Add to cart</button>
+                        <button className='Payment'>Buy</button>
+                        <button className='Collection' onClick={handleAddToCart}>Add to cart</button>
                     </div>
                 </div>
             </div>

@@ -10,7 +10,11 @@ const authenticationSchema = mongoose.Schema({
     State: String,
     PinCode: String,
     Country: String,
-    ProfilePic:String
+    ProfilePic:String,
+    Cart: [{
+        productId: { type: mongoose.Schema.Types.ObjectId, ref: 'ProductCollection' },
+        quantity: { type: Number, default: 1 }
+    }]
 });
 const authenticationModel = mongoose.model('mernstackecom', authenticationSchema);
 

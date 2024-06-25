@@ -1,35 +1,56 @@
-
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import './Swiper.css';  
-
-// Import Swiper styles
 import 'swiper/css';
-import 'swiper/css/navigation';
+import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
-import 'swiper/css/scrollbar';
+import 'swiper/css/navigation';
+import SwiperCore, { Autoplay, EffectCoverflow, Pagination, Navigation } from 'swiper/core';
+
+import data from '../Product/Product.json';
+
+// Initialize Swiper modules
+SwiperCore.use([Autoplay, EffectCoverflow, Pagination, Navigation]);
 
 const SwiperComponent = () => {
   return (
-    <div className="swiperContainer"> 
+    <div className="container">
+      <h1 className="heading">Flower Gallery</h1>
       <Swiper
-        modules={[Navigation, Pagination, Scrollbar, A11y]}
-        spaceBetween={50}
-        slidesPerView={3}
-        navigation
+        effect={'coverflow'}
+        grabCursor={true}
+        centeredSlides={true}
+        loop={true}
+        slidesPerView={'auto'}
+        coverflowEffect={{
+          rotate: 0,
+          stretch: 0,
+          depth: 100,
+          modifier: 2.5,
+        }}
         pagination={{ clickable: true }}
-        scrollbar={{ draggable: true }}
-        onSwiper={(swiper) => console.log(swiper)}
-        onSlideChange={() => console.log('slide change')}
+        navigation={true}
+        className="swiper_container"
       >
-        <SwiperSlide>Slide 1</SwiperSlide>
-        <SwiperSlide>Slide 2</SwiperSlide>
-        <SwiperSlide>Slide 3</SwiperSlide>
-        <SwiperSlide>Slide 4</SwiperSlide>
+        {data.map((product, index) => (
+          <SwiperSlide key={index}>
+            <div className="slide-content">
+              <img src={product.image} alt={product.name} />
+              <h3>{product.name}</h3>
+              <p>{product.description}</p>
+            </div>
+          </SwiperSlide>
+        ))}
+        <div className="slider-controler">
+          <div className="swiper-button-prev slider-arrow">
+            <ion-icon name="arrow-back-outline"></ion-icon>
+          </div>
+          <div className="swiper-button-next slider-arrow">
+            <ion-icon name="arrow-forward-outline"></ion-icon>
+          </div>
+          <div className="swiper-pagination"></div>
+        </div>
       </Swiper>
     </div>
   );
 };
 
-export default SwiperComponent;
-
+export { SwiperComponent };

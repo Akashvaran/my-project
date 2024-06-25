@@ -10,7 +10,7 @@ function ResetPassword() {
     function handleSubmit(e) {
         e.preventDefault();
 
-        axios.post(`http://localhost:8000/auth/reset/${token}`, { Password })
+        axios.put(`http://localhost:8000/auth/reset/${token}`, { Password })
             .then(res => {
                 if (res.data.status) {
                     setMessage("Password reset successful. You can now log in with your new password.");

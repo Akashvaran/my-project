@@ -6,6 +6,7 @@ import cookieParser from 'cookie-parser'
 import { Verification } from './midelware/Verification.js';
 import productRoute from './rouder/productrouter.js';
 import ContactRoute from './rouder/ContactRoute.js';
+import cartRoute from './rouder/cartRoute.js';
 
 const app = express();
 
@@ -21,6 +22,7 @@ app.use('/verify',Verification,authRoute);
 app.use('/product', productRoute);
 app.use('/uploads',express.static('uploads'));
 app.use('/api', ContactRoute);
+app.use('/api',cartRoute)
 databaseConnection();
 
 app.listen(8000, () => {

@@ -11,5 +11,5 @@ authRoute.route('/logout').get(Logout);
 authRoute.route('/:id').get(Verification, singleData);
 authRoute.route('/:id').put(Verification, upload.single('ProfilePic'), updateUser);
 authRoute.route('/forget').post(ForgetPassword);
-authRoute.route('/reset/:token').post(ResetPassword);
+authRoute.route('/reset/:token').put(ResetPassword);
 export default authRoute;

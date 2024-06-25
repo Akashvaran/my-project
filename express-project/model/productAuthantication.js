@@ -3,41 +3,43 @@ import mongoose from "mongoose";
 const productSchema = new mongoose.Schema({
     Name: {
         type: String,
-        required: true, 
-        trim: true 
+        required: true,
+        trim: true
     },
     Price: {
         type: Number,
-        required: true, 
-        min: 0 
+        required: true,
+        min: 0
     },
     Description: {
         type: String,
-        trim: true 
+        trim: true
     },
     Category: {
         type: String,
-        trim: true 
+        trim: true
     },
     Image: {
         type: String,
-        trim: true 
+        trim: true
     },
     Rate: {
         type: Number,
-        default: 0, 
-        min: 0, 
-        max: 5 
+        default: 0,
+        min: 0,
+        max: 5
+    },
+    RateCount: {
+        type: Number,
+        default: 0
     },
     Like: {
         type: Number,
-        default: 0, 
-        min: 0 
-    },
-   
+        default: 0,
+        min: 0
+    }, 
 });
 
 const productModel = mongoose.model('ProductCollection', productSchema);
 
 export default productModel;
-

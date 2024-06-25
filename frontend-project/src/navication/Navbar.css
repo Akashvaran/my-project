@@ -36,6 +36,10 @@
 .addtocart {
   margin-right: 20px;
   font-size: 24px;
+  cursor: pointer;
+}
+.addtocart a {
+  color: #fff;
 }
 .user-signup .sign-up {
   background-color: #fff;
@@ -45,12 +49,12 @@
   border-radius: 5px;
   cursor: pointer;
 }
-.dropdown {
+.dropdowns {
   position: relative;
   margin-right: 20px;
   margin-top: 10px;
 }
-.dropbtn {
+.dropbtns {
   background-color: transparent;
   color: #fff;
   cursor: pointer;

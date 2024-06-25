@@ -137,27 +137,32 @@ const updateProductLikes = async (req, res) => {
 const updateProductRating = async (req, res) => {
     try {
         const { rating } = req.body;
-        const product = await productModel.findById(req.params.id);
+        const productId = req.params.id;
+
+        // Validate input rating
+        const parsedRating = parseFloat(rating);
+        if (isNaN(parsedRating) || parsedRating < 0 || parsedRating > 5) {
+            return res.status(400).json({ message: 'Invalid rating value' });
+        }
+
+        // Find the product by ID
+        const product = await productModel.findById(productId);
 
         if (!product) {
             return res.status(404).json({ message: 'Product not found' });
         }
 
-        if (rating >= 0 && rating <= 5) {
-            const totalRating = product.Rate * product.RateCount + rating;
-            product.RateCount += 1;
-            product.Rate = totalRating / product.RateCount;
-        } else {
-            return res.status(400).json({ message: 'Invalid rating value' });
-        }
+        const totalRating = product.Rate * product.RateCount + parsedRating;
+        product.RateCount = (product.RateCount || 0) + 1;
+        product.Rate = totalRating / product.RateCount;
 
+        // Save updated product
         await product.save();
+
         res.json(product);
     } catch (error) {
         console.error('Error updating rating:', error);
         res.status(500).json({ message: 'Error updating rating', error });
     }
 };
-
-
 export{getProducts,getProductById,getProductsByCategory,deleteProduct,updateProduct,createProduct,bulkInsertProducts,updateProductLikes,updateProductRating}

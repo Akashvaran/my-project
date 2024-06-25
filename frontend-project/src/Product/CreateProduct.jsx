@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import './CreateProduct.css';
+// import './CreateProduct.css';
 import axios from 'axios';
 // import Jsonfile from '../Product/Product.json';
 import { ToastContainer, toast } from 'react-toastify';
@@ -80,7 +80,7 @@ const CreateProduct = () => {
                     <div className='form-group-data'>
                         <div className="form-group">
                             <label htmlFor="Name">Name</label>
-                            <input
+                            <input className='create-input'
                                 type="text"
                                 name="Name"
                                 value={product.Name}
@@ -90,7 +90,7 @@ const CreateProduct = () => {
                         </div>
                         <div className="form-group">
                             <label htmlFor="Price">Price</label>
-                            <input
+                            <input className='create-input'
                                 type="number"
                                 name="Price"
                                 value={product.Price}
@@ -109,7 +109,7 @@ const CreateProduct = () => {
                         </div>
                         <div className="form-group">
                             <label htmlFor="Category">Category</label>
-                            <input
+                            <input className='create-input'
                                 type="text"
                                 name="Category"
                                 value={product.Category}
@@ -119,7 +119,7 @@ const CreateProduct = () => {
                         </div>
                         <div className="form-group">
                             <label htmlFor="Image">Image URL</label>
-                            <input
+                            <input className='create-input'
                                 type="text"
                                 name="Image"
                                 value={product.Image}
@@ -129,7 +129,7 @@ const CreateProduct = () => {
                         </div>
                         <div className="form-group">
                             <label htmlFor="Rate">Rating (Rate)</label>
-                            <input
+                            <input className='create-input'
                                 type="number"
                                 name="Rate"
                                 value={product.Rate}
@@ -138,7 +138,7 @@ const CreateProduct = () => {
                         </div>
                         <div className="form-group">
                             <label htmlFor="Like">Rating (Like)</label>
-                            <input
+                            <input className='create-input'
                                 type="number"
                                 name="Like"
                                 value={product.Like}
@@ -154,4 +154,4 @@ const CreateProduct = () => {
     );
 };
 
-export default CreateProduct;
+export default CreateProduct
