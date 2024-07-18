@@ -4,6 +4,7 @@
     padding: 15px;
     top: 50px;
     gap: 10px;
+    left: 0;
 }
 
 .card-title {
@@ -63,3 +64,29 @@
 .btn-primary .spinner-border {
     margin-right: 5px;
 }
+
+
+.category-list-container {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 21%;
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+    scrollbar-color: #ffffff #f5f5f5;
+    margin-top: 40px;
+    width: 1350px;
+    height: 80px;
+    gap: 20px;
+    background-color: white;
+    box-shadow: 5px 4px 8px rgba(0.5, 0, 0, 0.5);
+
+}
+.category-list-container button {
+    background-color: orangered;
+    font-size: 20px;
+}
+
+.category-list-container button.active {
+    background-color: orange;
+}
+

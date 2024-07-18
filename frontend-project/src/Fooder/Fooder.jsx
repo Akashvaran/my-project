@@ -3,7 +3,6 @@ import './Fooder.css';
 import { Link } from 'react-router-dom';
 import { FaLinkedin, FaGithub, FaInstagramSquare, FaFacebookSquare } from 'react-icons/fa';
 import { Location } from '../map/Location';
-// import { Messages } from '../Message/GetMessage';
 
 const Footer = () => {
   return (
@@ -49,7 +48,7 @@ const Footer = () => {
         <hr className="hr-line mt-4" />
         <div className="CopyLink">
           <div className="text-center mt-4">
-            <p>All rights reserved © 2020</p>
+            <p>All rights reserved @ akash2003</p>
           </div>
           <div className="social-icons">
             <Link to="#"><FaLinkedin /></Link>

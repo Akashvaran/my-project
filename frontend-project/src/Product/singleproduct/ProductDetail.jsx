@@ -4,14 +4,17 @@ import axios from 'axios';
 import { GoHeart, GoHeartFill } from 'react-icons/go';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { FaStar } from 'react-icons/fa';
 import './ProductDetail.css';
 
 function ProductDetail() {
     const { id } = useParams();
     const [product, setProduct] = useState(null);
     const [likes, setLikes] = useState(0);
-    const [userRating, setUserRating] = useState('');
+    const [userRating, setUserRating] = useState(null);
     const [userLiked, setUserLiked] = useState(false);
+    const [selectedImage, setSelectedImage] = useState('');
+    const [rateColor, setRateColor] = useState(null);
 
     useEffect(() => {
         const fetchProduct = async () => {
@@ -20,6 +23,7 @@ function ProductDetail() {
                 const productData = response.data;
                 setProduct(productData);
                 setLikes(productData.Like || 0);
+                setSelectedImage(productData.Image || 'https://via.placeholder.com/150');
             } catch (error) {
                 console.error('Error fetching product:', error);
                 toast.error('Error fetching product details');
@@ -52,17 +56,10 @@ function ProductDetail() {
     const handleRatingSubmit = async (event) => {
         event.preventDefault();
         try {
-            const newRate = parseFloat(userRating);
-            if (isNaN(newRate) || newRate < 0 || newRate > 5) {
-                toast.error('Invalid rating value. Please enter a number between 0 and 5.');
-                return;
-            }
-
-            const response = await axios.post(`http://localhost:8000/product/products/${id}/rate`, { rating: newRate });
+            const response = await axios.post(`http://localhost:8000/product/products/${id}/rate`, { rating: userRating });
 
             if (response.status === 200 && response.data) {
                 setProduct(response.data);
-                setUserRating('');
                 toast.success('Rating submitted successfully');
             } else {
                 console.error('Error rating product:', response.statusText);
@@ -80,12 +77,12 @@ function ProductDetail() {
     const handleAddToCart = async () => {
         try {
             const token = localStorage.getItem('token');
-          
+
             if (!token) {
                 toast.error('You need to log in to add items to the cart.');
                 return;
             }
-    
+
             const response = await axios.post(
                 `http://localhost:8000/api/add`,
                 { productId: id, quantity: 1 },
@@ -96,7 +93,7 @@ function ProductDetail() {
                     withCredentials: true
                 }
             );
-    
+
             if (response.status === 200) {
                 toast.success('Product added to cart successfully');
             } else {
@@ -108,7 +105,19 @@ function ProductDetail() {
             toast.error('Error adding product to cart');
         }
     };
-    
+
+    const handleImageClick = (image) => {
+        setSelectedImage(image);
+    };
+
+    const handleStarClick = (rating) => {
+        setUserRating(rating);
+    };
+
+    const handleStarHover = (rating) => {
+        setRateColor(rating);
+    };
+
     if (!product) {
         return (
             <div className="loading-container">
@@ -123,7 +132,7 @@ function ProductDetail() {
             <div className="product-detail-card">
                 <div className="product-detail-content">
                     <img
-                        src={product.Image || 'https://via.placeholder.com/150'}
+                        src={selectedImage}
                         alt={product.Name}
                         className="product-detail-img"
                     />
@@ -144,7 +153,7 @@ function ProductDetail() {
                             <div>Likes: {likes}</div>
                         </div>
                         <div className='rating'>
-                            Rating
+                            <strong>Rating:</strong>
                             <div> {product.Rate}</div>
                         </div>
                     </div>
@@ -152,17 +161,28 @@ function ProductDetail() {
                         <strong>Category: </strong>{product.Category}
                     </p>
                     <form onSubmit={handleRatingSubmit}>
-                        <label htmlFor="userRating">Rate this product:</label>
-                        <input
-                            type="number"
-                            id="userRating"
-                            min="0"
-                            max="5"
-                            step="0.1"
-                            value={userRating}
-                            onChange={(e) => setUserRating(e.target.value)}
-                        />
-                        <button type="submit">Submit Rating</button>
+                        <div className="star-rating">
+                            {[...Array(5)].map((_, index) => {
+                                const currentRate = index + 1;
+                                return (
+                                    <label key={index}>
+                                        <input
+                                            type="radio"
+                                            name="rating"
+                                            value={currentRate}
+                                            onClick={() => handleStarClick(currentRate)}
+                                        />
+                                        <FaStar
+                                            size={40}
+                                            color={currentRate <= (rateColor || userRating) ? "yellow" : "grey"}
+                                            onMouseEnter={() => handleStarHover(currentRate)}
+                                            onMouseLeave={() => setRateColor(null)}
+                                        />
+                                    </label>
+                                );
+                            })}
+                        </div>
+                        <button type="submit" className="submit-rating">Submit Rating</button>
                     </form>
                     <div className='collection'>
                         <button className='Payment'>Buy</button>
@@ -170,9 +190,21 @@ function ProductDetail() {
                     </div>
                 </div>
             </div>
+            <div className='related-images'>
+                {product.Images.map((img, index) => (
+                    <img
+                        key={index}
+                        src={img}
+                        alt={`${product.Name} - ${index}`}
+                        className="thumbnail"
+                        onClick={() => handleImageClick(img)}
+                    />
+                ))}
+            </div>
             <ToastContainer />
         </div>
     );
 }
 
 export { ProductDetail };
+

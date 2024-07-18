@@ -31,19 +31,19 @@
     width: 1000px; 
 }
 
-.form-group {
+.form-groups {
     margin-bottom: 20px;
 }
 
-.form-group label {
+.form-groups label {
     display: block;
     margin-bottom: 8px;
     font-weight: bold;
     color: white;
 }
 
-.form-group .create-input,
-.form-group textarea {
+.form-groups .create-input,
+.form-groups textarea {
     padding: 12px;
     border: 1px solid aqua;
     border-radius: 7px;
@@ -54,7 +54,7 @@
     color: aliceblue;
 }
 
-.form-group textarea {
+.form-groups textarea {
     resize: vertical;
     min-height: 100px;
     
@@ -72,19 +72,19 @@ button[type="submit"] {
     margin: 0 auto; 
 }
 
-.form-group button[type="submit"]:hover {
+.form-groups button[type="submit"]:hover {
     background-color: #0056b3;
 }
 
-.form-group input[name="Rate"],
-.form-group input[name="Like"] {
+.form-groups input[name="Rate"],
+.form-groups input[name="Like"] {
     -webkit-appearance: none;
     appearance: none;
     background: transparent;
 }
 
-.form-group textarea,
-.form-group input:not([type="number"]) {
+.form-groups textarea,
+.form-groups input:not([type="number"]) {
     border: 1px solid aqua;
     border-radius: 7px;
     font-size: 14px;

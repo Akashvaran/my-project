@@ -2,48 +2,57 @@
     margin: 0 auto;
     padding: 20px;
     background-color: pink;
-
 }
 
 .product-detail-card {
     display: flex;
     margin-bottom: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
 }
 
 .product-detail-content {
+    flex: 1;
     display: flex;
     justify-content: center;
+    align-items: center;
     padding: 20px;
+    border-right: 1px solid #ddd;
+    width: 600px;
 }
 
 .product-detail-img {
-   width: 70%;
+    width: 90%;
     height: auto;
-    margin-bottom: 20px;
+    max-width: 400px;
+    object-fit: cover;
 }
 
 .product-detail-body {
+    flex: 2;
     padding: 20px;
 }
-.product-detail-body h2 {
-    color: red;   
-}
-
 
 .product-detail-title {
     font-size: 24px;
     margin-bottom: 10px;
+    color: red;
 }
 
 .product-detail-price {
     font-size: 20px;
     margin-bottom: 10px;
 }
+
 .product-detail-description strong {
     color: blue;
 }
+
 .product-detail-rating {
     display: flex;
+    align-items: center;
     margin-bottom: 10px;
 }
 
@@ -54,15 +63,13 @@
     align-items: center;
     font-size: 24px;
     color: #ff4b4b;
-
+    display: flex;
 }
 
 .rating {
-    margin-top: 7px;
-   margin-left: 100px;
+    margin-left: 20px;
     font-size: 18px;
 }
-
 
 form {
     display: flex;
@@ -79,7 +86,6 @@ input {
     padding: 5px;
     font-size: 16px;
     margin-bottom: 10px;
-   
 }
 
 button {
@@ -90,6 +96,10 @@ button {
     color: white;
     border: none;
     border-radius: 4px;
+    transition: background-color 0.3s;
+}
+.star-rating input[type="radio"] {
+    display: none;
 }
 
 .product-detail-description,
@@ -101,6 +111,7 @@ button {
 .loading-container {
     display: flex;
     justify-content: center;
+    align-items: center;
     height: 100vh;
 }
 
@@ -114,18 +125,51 @@ button {
 }
 
 @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
+
 .collection {
     display: flex;
-    gap: 50px;
+    gap: 20px;
 }
+
 .collection button {
-    width: 250px;
-    height: auto;
+    flex: 1;
+    padding: 10px;
     border-radius: 20px;
     background-color: black;
     color: aqua;
-    font-size: 20px;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.collection button:hover {
+    background-color: #333;
+}
+
+.related-images {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+.related-images img {
+    cursor: pointer;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border: 1px solid black;
+    padding: 5px;
+    background-color: aliceblue;
+    transition: transform 0.3s;
+}
+
+.related-images img:hover {
+    transform: scale(1.1);
 }

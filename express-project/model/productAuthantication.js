@@ -23,15 +23,14 @@ const productSchema = new mongoose.Schema({
         type: String,
         trim: true
     },
+    Images: [{
+        type: String,
+    }],
     Rate: {
         type: Number,
         default: 0,
         min: 0,
         max: 5
-    },
-    RateCount: {
-        type: Number,
-        default: 0
     },
     Like: {
         type: Number,

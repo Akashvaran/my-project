@@ -80,4 +80,3 @@ const Carousal = () => {
 
 export {Carousal };
 
-

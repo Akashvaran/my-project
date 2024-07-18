@@ -23,7 +23,7 @@ export const MainRoute = () => {
     <BrowserRouter>
       <>
         {showLogin && <Login setShowLogin={setShowLogin} />}
-        <Navbar setShowLogin={setShowLogin} />
+        <Navbar setShowLogin={setShowLogin} /> 
         <div className="MainRouding">
           <div className="sidebarRouding">
             <Sidebar />

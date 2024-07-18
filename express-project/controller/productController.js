@@ -165,4 +165,34 @@ const updateProductRating = async (req, res) => {
         res.status(500).json({ message: 'Error updating rating', error });
     }
 };
-export{getProducts,getProductById,getProductsByCategory,deleteProduct,updateProduct,createProduct,bulkInsertProducts,updateProductLikes,updateProductRating}
+const getCategories = async (req, res) => {
+    try {
+        const categories = await productModel.distinct('Category');
+        res.status(200).json(categories);
+    } catch (err) {
+        res.status(500).send(err);
+    }
+};
+const searchProducts = async (req, res) => {
+    try {
+        const searchTerm = req.query.term;
+        // console.log(`Searching for term: ${searchTerm}`);
+
+        if (!searchTerm) {
+            return res.status(400).json({ error: 'Search term is required' });
+        }
+
+        // console.log("Attempting to find products...");
+        const products = await productModel.find({
+            Name: { $regex: searchTerm, $options: 'i' }
+        });
+
+        // console.log(`Found products: ${products.length}`);
+        res.status(200).json(products);
+    } catch (err) {
+        console.error('Error fetching search results:', err);
+        console.error(err.stack); 
+        res.status(500).json({ error: 'Internal Server Error', message: err.message }); 
+    }
+};
+export{getProducts,getProductById,getProductsByCategory,deleteProduct,updateProduct,createProduct,bulkInsertProducts,updateProductLikes,updateProductRating,getCategories,searchProducts}

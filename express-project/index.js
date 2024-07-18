@@ -23,6 +23,7 @@ app.use('/product', productRoute);
 app.use('/uploads',express.static('uploads'));
 app.use('/api', ContactRoute);
 app.use('/api',cartRoute)
+
 databaseConnection();
 
 app.listen(8000, () => {

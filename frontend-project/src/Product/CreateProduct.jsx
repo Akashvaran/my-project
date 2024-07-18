@@ -1,9 +1,10 @@
 import { useState } from 'react';
-// import './CreateProduct.css';
+import './CreateProduct.css';
 import axios from 'axios';
-// import Jsonfile from '../Product/Product.json';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+// import Jsonfile from './Product.json'
+
 
 const CreateProduct = () => {
     const [product, setProduct] = useState({
@@ -72,13 +73,14 @@ const CreateProduct = () => {
     // };
 
     return (
+        <>
         <div className='fullcontainer'>
             <ToastContainer />
             <div className="create-product-container">
                 <h2>Create Product</h2>
                 <form onSubmit={handleSubmit}>
                     <div className='form-group-data'>
-                        <div className="form-group">
+                        <div className="form-groups">
                             <label htmlFor="Name">Name</label>
                             <input className='create-input'
                                 type="text"
@@ -88,7 +90,7 @@ const CreateProduct = () => {
                                 required
                             />
                         </div>
-                        <div className="form-group">
+                        <div className="form-groups">
                             <label htmlFor="Price">Price</label>
                             <input className='create-input'
                                 type="number"
@@ -98,7 +100,7 @@ const CreateProduct = () => {
                                 required
                             />
                         </div>
-                        <div className="form-group">
+                        <div className="form-groups">
                             <label htmlFor="Description">Description</label>
                             <textarea
                                 name="Description"
@@ -107,7 +109,7 @@ const CreateProduct = () => {
                                 required
                             />
                         </div>
-                        <div className="form-group">
+                        <div className="form-groups">
                             <label htmlFor="Category">Category</label>
                             <input className='create-input'
                                 type="text"
@@ -117,7 +119,7 @@ const CreateProduct = () => {
                                 required
                             />
                         </div>
-                        <div className="form-group">
+                        <div className="form-groups">
                             <label htmlFor="Image">Image URL</label>
                             <input className='create-input'
                                 type="text"
@@ -127,7 +129,7 @@ const CreateProduct = () => {
                                 required
                             />
                         </div>
-                        <div className="form-group">
+                        <div className="form-groups">
                             <label htmlFor="Rate">Rating (Rate)</label>
                             <input className='create-input'
                                 type="number"
@@ -136,7 +138,7 @@ const CreateProduct = () => {
                                 onChange={handleRatingChange}
                             />
                         </div>
-                        <div className="form-group">
+                        <div className="form-groups">
                             <label htmlFor="Like">Rating (Like)</label>
                             <input className='create-input'
                                 type="number"
@@ -151,7 +153,29 @@ const CreateProduct = () => {
                 {/* <button className='buttonsClick' onClick={handleBulkSubmit}>Bulk Insert Products from JSON</button> */}
             </div>
         </div>
+        </>
     );
 };
 
 export default CreateProduct
+
+
+
+// export const CreateProducts = () => {
+//   return (
+//     <div>
+//       {Jsons.map(product => (
+//         <div key={product.id}>
+//           <h2>{product.Name}</h2>
+//           <p>Price: ${product.Price}</p>
+//           <img src={product.Image} alt={product.Name} />
+//           <div>
+//             {product.Images.map((img, index) => (
+//               <img key={index} src={img} alt={`${product.Name} - ${index}`} />
+//             ))}
+//           </div>
+//         </div>
+//       ))}
+//     </div>
+//   )
+// }

@@ -4,14 +4,14 @@ import { Link, useNavigate } from 'react-router-dom';
 import { BsSearch } from "react-icons/bs";
 import { FiShoppingCart } from "react-icons/fi";
 import { FaRegUserCircle } from "react-icons/fa";
-import { IoCloseSharp } from "react-icons/io5";
 import axios from 'axios';
 import './Navbar.css';
+import { Searchbar } from '../navication/Searchbar.jsx';
 
 const Navbar = ({ setShowLogin }) => {
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-    const [isSearchOpen, setIsSearchOpen] = useState(false);
     const [userDetails, setUserDetails] = useState(null);
+    const [showOffcanvas, setShowOffcanvas] = useState(false);
     const navigate = useNavigate();
 
     const getUserDetailsFromLocalStorage = () => {
@@ -57,6 +57,15 @@ const Navbar = ({ setShowLogin }) => {
         }
     };
 
+    const handleSearchIconClick = () => {
+        setShowOffcanvas(true);
+    };
+
+    const handleCloseOffcanvas = () => {
+        setShowOffcanvas(false);
+    };
+
+
     return (
         <div className="Navigation-bar">
             <img className='logo' src='logo.png' alt="logo" />
@@ -70,21 +79,16 @@ const Navbar = ({ setShowLogin }) => {
             </div>
 
             <div className='Navbar-Right'>
-                <div className='mainsearch-box' onClick={() => setIsSearchOpen(!isSearchOpen)}>
+                <div className='mainsearch-box' onClick={handleSearchIconClick}>
                     <p className="search-box"><BsSearch /></p>
                 </div>
-                {isSearchOpen && (
-                    <div className='searchs-box'>
-                        <span className='closeMenuIcon' onClick={() => setIsSearchOpen(false)}><IoCloseSharp /></span>
-                        <form action="#" className='searchbar-form'>
-                            <input type="text" placeholder='search any' />
-                            <button className='searchbutton' type='submit '><BsSearch /></button>
-                        </form>
-                    </div>
-                )}
+                <Searchbar
+                    show={showOffcanvas}
+                    handleClose={handleCloseOffcanvas}
+                />
                 <div className='addtocollection'>
                     <div className="addtocart">
-                    <p> <Link to={'/addtocart'}><FiShoppingCart /></Link> </p>  
+                        <p> <Link to={'/addtocart'}><FiShoppingCart /></Link> </p>  
                         <div className='collectioncount'>
                             <span className='addtocount'>0</span>
                         </div>
