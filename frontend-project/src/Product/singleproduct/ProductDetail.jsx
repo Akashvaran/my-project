@@ -1,11 +1,14 @@
-import { useState, useEffect } from 'react';
+import  { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import { GoHeart, GoHeartFill } from 'react-icons/go';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { FaStar } from 'react-icons/fa';
+import useCart from '../Usecart'; 
+import { Spinner } from 'react-bootstrap'; 
 import './ProductDetail.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function ProductDetail() {
     const { id } = useParams();
@@ -15,6 +18,7 @@ function ProductDetail() {
     const [userLiked, setUserLiked] = useState(false);
     const [selectedImage, setSelectedImage] = useState('');
     const [rateColor, setRateColor] = useState(null);
+    const { addToCart, loading: cartLoading } = useCart(); // Use the useCart hook
 
     useEffect(() => {
         const fetchProduct = async () => {
@@ -71,38 +75,6 @@ function ProductDetail() {
             } else {
                 toast.error('Error submitting rating');
             }
-        }
-    };
-
-    const handleAddToCart = async () => {
-        try {
-            const token = localStorage.getItem('token');
-
-            if (!token) {
-                toast.error('You need to log in to add items to the cart.');
-                return;
-            }
-
-            const response = await axios.post(
-                `http://localhost:8000/api/add`,
-                { productId: id, quantity: 1 },
-                {
-                    headers: {
-                        Authorization: `Bearer ${token}`
-                    },
-                    withCredentials: true
-                }
-            );
-
-            if (response.status === 200) {
-                toast.success('Product added to cart successfully');
-            } else {
-                console.error('Error adding product to cart:', response.statusText);
-                toast.error('Error adding product to cart');
-            }
-        } catch (error) {
-            console.error('Error adding product to cart:', error);
-            toast.error('Error adding product to cart');
         }
     };
 
@@ -186,7 +158,13 @@ function ProductDetail() {
                     </form>
                     <div className='collection'>
                         <button className='Payment'>Buy</button>
-                        <button className='Collection' onClick={handleAddToCart}>Add to cart</button>
+                        <button 
+                            className='Collection' 
+                            onClick={() => addToCart(id)} // Use addToCart function
+                            disabled={cartLoading}
+                        >
+                            {cartLoading ? <Spinner animation="border" size="sm" /> : 'Add to cart'}
+                        </button>
                     </div>
                 </div>
             </div>

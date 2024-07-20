@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Allproduct } from '../Product/Allproduct/GetProduct';
+import {AllProduct} from '../Product/Allproduct/GetProduct'
 import './Home.css'
 import { Footer } from '../Fooder/Fooder';
 
@@ -15,7 +15,7 @@ export const Home = () => {
     <>
         <Carousal/>
 
-        <Allproduct/>
+        <AllProduct/>
 
         <div className='Fooder-component'>  <Footer/> </div>
 

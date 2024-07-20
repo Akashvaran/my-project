@@ -2,15 +2,20 @@ import { useState, useEffect } from 'react';
 import { Card, Button, Spinner } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import useCart from '../Usecart';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import './GetProduct.css';
 
-function Allproduct() {
+function AllProduct() {
     const [products, setProducts] = useState([]);
     const [loadingState, setLoadingState] = useState({});
+    const [cartLoadingState, setCartLoadingState] = useState({});
     const [categories, setCategories] = useState([]);
     const [selectedCategory, setSelectedCategory] = useState('All');
     const navigate = useNavigate();
+    const { addToCart } = useCart();
 
     useEffect(() => {
         const fetchCategories = async () => {
@@ -43,21 +48,23 @@ function Allproduct() {
         fetchProducts();
     }, [selectedCategory]);
 
-    const addToCart = (product) => {
-        console.log('Adding to cart:', product);
-        // Implement your add to cart functionality here
-    };
-
     const handleGoSomewhere = (productId) => {
         setLoadingState(prevState => ({ ...prevState, [productId]: true }));
         setTimeout(() => {
             setLoadingState(prevState => ({ ...prevState, [productId]: false }));
             navigate(`/product/${productId}`);
-        }, 800); 
+        }, 800);
     };
 
     const handleCategorySelect = (category) => {
         setSelectedCategory(category);
+    };
+
+    const handleAddToCart = async (productId) => {
+        setCartLoadingState(prevState => ({ ...prevState, [productId]: true }));
+        await addToCart(productId, (isLoading) => {
+            setCartLoadingState(prevState => ({ ...prevState, [productId]: isLoading }));
+        });
     };
 
     return (
@@ -87,7 +94,6 @@ function Allproduct() {
                             <Card.Text className="card-texts">
                                 <strong>Price: </strong><span className='Price'>${product.Price}</span>
                             </Card.Text>
-                           
                             <div className='CartButton'>
                                 <Button 
                                     variant="primary" 
@@ -98,17 +104,20 @@ function Allproduct() {
                                 </Button>
                                 <Button 
                                     className="btn-cart" 
-                                    onClick={() => addToCart(product)}
+                                    onClick={() => handleAddToCart(product._id)} 
+                                    disabled={cartLoadingState[product._id]}
                                 >
-                                    Add to Cart
+                                    {cartLoadingState[product._id] ? <Spinner animation="border" size="sm" /> : 'Add to Cart'}
                                 </Button>
                             </div>
                         </Card.Body>
                     </Card>
                 ))}
             </div>
+            <ToastContainer />
         </div>
     );
 }
 
-export { Allproduct };
+export { AllProduct };
+
