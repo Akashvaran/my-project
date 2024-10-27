@@ -154,7 +154,7 @@ const ResetPassword = async (req, res) => {
 
 
 
-// Function to fetch single user data
+
 const singleData = async (req, res) => {
     const { id } = req.params;
 

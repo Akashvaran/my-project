@@ -19,7 +19,7 @@
 }
 
 .card-img-top {
-    width: 100%;
+    width: 90%;
     height: 200px;
     object-fit: cover;
     transition: transform 0.3s ease;
@@ -90,3 +90,7 @@
     background-color: orange;
 }
 
+.page-button.active {
+    background-color: orange;
+    color: white;
+}

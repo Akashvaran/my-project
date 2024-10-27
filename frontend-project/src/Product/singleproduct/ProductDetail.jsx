@@ -1,14 +1,13 @@
-import  { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import { useParams, Link } from 'react-router-dom';
 import axios from 'axios';
 import { GoHeart, GoHeartFill } from 'react-icons/go';
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 import { FaStar } from 'react-icons/fa';
-import useCart from '../Usecart'; 
-import { Spinner } from 'react-bootstrap'; 
+import { ToastContainer, toast } from 'react-toastify';
+import { Spinner } from 'react-bootstrap';
+import 'react-toastify/dist/ReactToastify.css';
+import useCart from '../Usecart';
 import './ProductDetail.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 function ProductDetail() {
     const { id } = useParams();
@@ -18,7 +17,8 @@ function ProductDetail() {
     const [userLiked, setUserLiked] = useState(false);
     const [selectedImage, setSelectedImage] = useState('');
     const [rateColor, setRateColor] = useState(null);
-    const { addToCart, loading: cartLoading } = useCart(); // Use the useCart hook
+    const { addToCart, removeFromCart, cartItems } = useCart();
+    const [cartLoading, setCartLoading] = useState(false);
 
     useEffect(() => {
         const fetchProduct = async () => {
@@ -59,10 +59,19 @@ function ProductDetail() {
 
     const handleRatingSubmit = async (event) => {
         event.preventDefault();
-        try {
-            const response = await axios.post(`http://localhost:8000/product/products/${id}/rate`, { rating: userRating });
+        const token = localStorage.getItem('token');
+        if (!token) {
+            toast.error('You need to log in to rate a product.');
+            return;
+        }
 
-            if (response.status === 200 && response.data) {
+        try {
+            const response = await axios.post(`http://localhost:8000/product/products/${id}/rate`, { rating: userRating }, {
+                headers: { Authorization: `Bearer ${token}` },
+                withCredentials: true
+            });
+
+            if (response.status === 200) {
                 setProduct(response.data);
                 toast.success('Rating submitted successfully');
             } else {
@@ -76,6 +85,18 @@ function ProductDetail() {
                 toast.error('Error submitting rating');
             }
         }
+    };
+
+    const handleAddToCart = async () => {
+        setCartLoading(true);
+        await addToCart(id);
+        setCartLoading(false);
+    };
+
+    const handleRemoveFromCart = async () => {
+        setCartLoading(true);
+        await removeFromCart(id);
+        setCartLoading(false);
     };
 
     const handleImageClick = (image) => {
@@ -93,7 +114,7 @@ function ProductDetail() {
     if (!product) {
         return (
             <div className="loading-container">
-                <div className="spinner" />
+                <Spinner animation="border" />
                 <ToastContainer />
             </div>
         );
@@ -157,14 +178,27 @@ function ProductDetail() {
                         <button type="submit" className="submit-rating">Submit Rating</button>
                     </form>
                     <div className='collection'>
-                        <button className='Payment'>Buy</button>
-                        <button 
-                            className='Collection' 
-                            onClick={() => addToCart(id)} // Use addToCart function
-                            disabled={cartLoading}
-                        >
-                            {cartLoading ? <Spinner animation="border" size="sm" /> : 'Add to cart'}
-                        </button>
+                        <Link to={`/Orderform/${product._id}`}>
+                            <button className='Payment'>Buy</button>
+                        </Link>
+                        {cartItems.some(item => item.productId === product._id) ? (
+                            <button
+                                className='Collection'
+                                onClick={handleRemoveFromCart}
+                                disabled={cartLoading}
+                            >
+                                {cartLoading ? <Spinner animation="border" size="sm" /> : 'Remove from Cart'}
+                            </button>
+                        ) : (
+                            <button
+                                className='Collection'
+                                onClick={handleAddToCart}
+                                disabled={cartLoading}
+                            >
+                                {cartLoading ? <Spinner animation="border" size="sm" /> : 'Add to Cart'}
+                            </button>
+                        )}
+
                     </div>
                 </div>
             </div>

@@ -1,4 +1,5 @@
 /* eslint-disable react/prop-types */
+
 import { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { BsSearch } from "react-icons/bs";
@@ -6,13 +7,15 @@ import { FiShoppingCart } from "react-icons/fi";
 import { FaRegUserCircle } from "react-icons/fa";
 import axios from 'axios';
 import './Navbar.css';
-import { Searchbar } from '../navication/Searchbar.jsx';
+import { Searchbar } from './Searchbar.jsx';
+import { useCart } from '../addtocart/CartContext.jsx'; 
 
 const Navbar = ({ setShowLogin }) => {
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
     const [userDetails, setUserDetails] = useState(null);
     const [showOffcanvas, setShowOffcanvas] = useState(false);
     const navigate = useNavigate();
+    const { cartItems } = useCart();
 
     const getUserDetailsFromLocalStorage = () => {
         try {
@@ -32,9 +35,12 @@ const Navbar = ({ setShowLogin }) => {
     useEffect(() => {
         const user = getUserDetailsFromLocalStorage();
         if (user) {
-            setUserDetails(user);
+            setUserDetails(user);            
         }
-    }, []);
+        return()=>{
+            setUserDetails(null)
+        }
+    },[]);
 
     const username = userDetails ? userDetails.Name : 'Your Name';
     const userImage = userDetails && userDetails.ProfilePic ? `http://localhost:8000/${userDetails.ProfilePic}` : null;
@@ -65,6 +71,8 @@ const Navbar = ({ setShowLogin }) => {
         setShowOffcanvas(false);
     };
 
+   
+    const totalQuantity = cartItems.reduce((acc, item) => acc + item.quantity,0);
 
     return (
         <div className="Navigation-bar">
@@ -90,7 +98,7 @@ const Navbar = ({ setShowLogin }) => {
                     <div className="addtocart">
                         <p> <Link to={'/addtocart'}><FiShoppingCart /></Link> </p>  
                         <div className='collectioncount'>
-                            <span className='addtocount'>0</span>
+                            <span className='addtocount'>{totalQuantity}</span> 
                         </div>
                     </div>
                 </div>

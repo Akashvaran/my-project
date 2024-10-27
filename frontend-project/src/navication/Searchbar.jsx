@@ -1,8 +1,8 @@
 /* eslint-disable react/prop-types */
-import { useState, useCallback } from 'react';
+import { useState } from 'react';
 import axios from 'axios';
 import { Offcanvas, Form, FormControl } from 'react-bootstrap';
-import { useNavigate } from 'react-router-dom'; // Import the useNavigate hook
+import { useNavigate } from 'react-router-dom';
 import './Searchbar.css';
 
 const Searchbar = ({ show, handleClose }) => {
@@ -11,9 +11,9 @@ const Searchbar = ({ show, handleClose }) => {
   const [error, setError] = useState('');
   const [open, setOpen] = useState(false);
 
-  const navigate = useNavigate(); // Initialize useNavigate hook
+  const navigate = useNavigate();
 
-  const fetchSearchResults = useCallback(async (searchTerm) => {
+  const fetchSearchResults = async (searchTerm) => {
     if (!searchTerm) {
       setSearchResults([]);
       setOpen(false);
@@ -29,7 +29,7 @@ const Searchbar = ({ show, handleClose }) => {
     } catch (err) {
       setError('Failed to fetch search results. Please try again later.');
     }
-  }, []);
+  };
 
   const handleSearchChange = (e) => {
     setSearchTerm(e.target.value);
@@ -42,8 +42,8 @@ const Searchbar = ({ show, handleClose }) => {
   };
 
   const handleProductClick = (id) => {
-    handleClose(); // Close the Offcanvas
-    navigate(`/product/${id}`); // Navigate to the product detail page
+    handleClose();
+    navigate(`/product/${id}`);
   };
 
   return (
@@ -72,7 +72,7 @@ const Searchbar = ({ show, handleClose }) => {
                   <li
                     key={product._id}
                     className="search-result-item"
-                    onClick={() => handleProductClick(product._id)} // Add onClick handler
+                    onClick={() => handleProductClick(product._id)} 
                   >
                     <img src={product.Image} alt={product.Name} className="search-result-image" />
                     <span className="search-result-name">{product.Name}</span>
@@ -92,6 +92,3 @@ const Searchbar = ({ show, handleClose }) => {
 };
 
 export { Searchbar };
-
-
-
